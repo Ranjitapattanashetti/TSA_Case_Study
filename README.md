@@ -13,10 +13,6 @@ Performed year-wise incident analysis to answer:
 
 Conducted state-level analysis using macro variables to dynamically answer questions such as:
 
-“What are the most common Claim Types, Claim Sites, and Dispositions for a selected state?”
-
-“What are the mean, minimum, maximum, and total Close Amounts by state?”
-
 Answered state-specific business question:
 “In Hawaii, how many claims were related to Property Damage?”
 → 1,481 claims identified.
