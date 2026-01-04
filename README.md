@@ -7,9 +7,6 @@ Cleaned and standardized raw data by handling missing values, duplicates, invali
 
 Created a date-validation logic to flag records with missing, invalid, or illogical dates (4,241 records identified for review).
 
-Answered key business question:
-“How many date issues exist in the overall dataset?”
-
 Performed year-wise incident analysis to answer:
 “How many claims occurred per year, and when did incidents fall below 10,000?”
 → Identified 2012 as the first year with <10,000 incidents.
