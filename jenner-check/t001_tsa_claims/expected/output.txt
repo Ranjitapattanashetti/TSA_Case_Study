@@ -1,0 +1,146 @@
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: tsa.claims_raw
+Observations:  20
+Variables:     12
+
+Variables (in alphabetical order):
+
+  #  Variable       Type    Len  Format  Label
+---  -------------  ----  -----  ------  -----
+  1  City           Char     20          
+  2  Claim_Number    Num      8          
+  3  Claim_Site     Char     20          
+  4  Claim_Type     Char     40          
+  5  Close_Amount    Num      8          
+  6  County         Char     20          
+  7  Date_Received   Num      8  DATE9.  
+  8  Disposition    Char     30          
+  9  Incident_Date   Num      8  DATE9.  
+ 10  Item_Category  Char     20          
+ 11  State          Char      2          
+ 12  StateName      Char     20          
+
+-------------------------------------------------------------------------------
+
+
+  Obs               Claim_Type       Claim_Site  Item_Category      Disposition   StateName  State       County         City  Claim_Number  Date_Received  Incident_Date  Close_Amount
+-----  -----------------------  ---------------  -------------  ---------------  ----------  -----  -----------  -----------  ------------  -------------  -------------  ------------
+    1  Passenger Property Loss  Checked Baggage  Jewelry        Approve in Full  hawaii      hi     Honolulu     Honolulu          2002001      15JAN2002      10JAN2002           250
+    2  Property Damage          Checkpoint       Clothing       Deny             california  ca     Los Angeles  Los Angeles       2002002      20FEB2002      18FEB2002         120.5
+    3  Property Damage          Checked Baggage  Electronics    Settle           hawaii      hi     Honolulu     Honolulu          2003003      05MAR2003      01MAR2003          1481
+    4  Personal Injury          Checkpoint       -              Deny             new york    ny     Queens       New York          2004004      10APR2004      08APR2004             0
+    5  Passenger Theft/Loss     Other            Cash           Approve in Full  illinois    il     Cook         Chicago           2005005      12MAY2005      10MAY2005         75.25
+    6  Missed Flight            Pre-Check        -              In Review        washington  wa     King         Seattle           2006006      18JUN2006              .             .
+    7  -                        -                -              Received                     tx                                    2007007      22JUL2007      20JUL2007           300
+    8  Complaint                Other            Other          Approve in Full  florida     fl     Miami-Dade   Miami             2008008      30AUG2008      25AUG2008            50
+    9  Property Damage          Checkpoint       Baggage        Deny             hawaii      hi     Maui         Kahului           2009009      14SEP2009      10SEP2009          1481
+   10  Motor Vehicle            Motor Vehicle    Auto           Settle           texas       tx     Tarrant      Fort Worth        2010010      05OCT2010      01OCT2010           900
+
+... 10 more observations (showing 10 of 20)
+
+                                                   The FREQ Procedure
+
+                                             Cumulative    Cumulative
+Claim_Site         Frequency    Percent     Frequency      Percent
+------------------------------------------------------------------------
+-                          1      5.00            1         5.00
+Bus Station                1      5.00            2        10.00
+Checked Baggage            5     25.00            7        35.00
+Checkpoint                 5     25.00           12        60.00
+Motor Vehicle              1      5.00           13        65.00
+Not Provided               1      5.00           14        70.00
+Other                      4     20.00           18        90.00
+Pre-Check                  1      5.00           19        95.00
+Weird Site                 1      5.00           20       100.00
+
+                                             Cumulative    Cumulative
+Disposition        Frequency    Percent     Frequency      Percent
+------------------------------------------------------------------------
+*Insufficient              1      5.00            1         5.00
+Approve in Full            5     25.00            6        30.00
+Bad Disposition            1      5.00            7        35.00
+Closed:Canceled            1      5.00            8        40.00
+Deny                       6     30.00           14        70.00
+In Review                  1      5.00           15        75.00
+Pending Payment            1      5.00           16        80.00
+Received                   1      5.00           17        85.00
+Settle                     3     15.00           20       100.00
+
+                                                     Cumulative    Cumulative
+Claim_Type                 Frequency    Percent     Frequency      Percent
+--------------------------------------------------------------------------------
+-                                  1      5.00            1         5.00
+Bogus Type                         1      5.00            2        10.00
+Complaint                          1      5.00            3        15.00
+Compliment                         1      5.00            4        20.00
+Employee Loss (MPCECA)             1      5.00            5        25.00
+Missed Flight                      1      5.00            6        30.00
+Motor Vehicle                      1      5.00            7        35.00
+Passenger Property Loss            2     10.00            9        45.00
+Passenger Theft/Loss               1      5.00           10        50.00
+Personal Injury                    1      5.00           11        55.00
+Property Damage                    7     35.00           18        90.00
+Property Loss                      1      5.00           19        95.00
+Wrongful Death                     1      5.00           20       100.00
+                                                  Overall Date Issues
+
+                                                   The FREQ Procedure
+
+                                          Cumulative    Cumulative
+Date Issues     Frequency    Percent     Frequency      Percent
+---------------------------------------------------------------------
+Needs Review            5    100.00            5       100.00
+                                                    Claims per Year
+
+                                                   The FREQ Procedure
+
+                                           Cumulative    Cumulative
+Incident Date    Frequency    Percent     Frequency      Percent
+----------------------------------------------------------------------
+2002                     2     14.29            2        14.29
+2003                     1      7.14            3        21.43
+2004                     1      7.14            4        28.57
+2005                     1      7.14            5        35.71
+2007                     1      7.14            6        42.86
+2008                     1      7.14            7        50.00
+2009                     1      7.14            8        57.14
+2010                     1      7.14            9        64.29
+2011                     1      7.14           10        71.43
+2012                     1      7.14           11        78.57
+2013                     1      7.14           12        85.71
+2015                     1      7.14           13        92.86
+2017                     1      7.14           14       100.00
+                                               Claim Analysis for Hawaii
+
+                                                   The FREQ Procedure
+
+                                                     Cumulative    Cumulative
+Claim Type                 Frequency    Percent     Frequency      Percent
+--------------------------------------------------------------------------------
+Passenger Property Loss            1     25.00            1        25.00
+Property Damage                    3     75.00            4       100.00
+
+                                             Cumulative    Cumulative
+Claim Site         Frequency    Percent     Frequency      Percent
+------------------------------------------------------------------------
+Checked Baggage            3     75.00            3        75.00
+Checkpoint                 1     25.00            4       100.00
+
+                                             Cumulative    Cumulative
+Disposition        Frequency    Percent     Frequency      Percent
+------------------------------------------------------------------------
+Approve in Full            2     50.00            2        50.00
+Deny                       1     25.00            3        75.00
+Settle                     1     25.00            4       100.00
+                                           Close Amount Statistics for Hawaii
+
+                                                  The MEANS Procedure
+
+ Variable      Label                  Mean     Minimum     Maximum            Sum
+ --------------------------------------------------------------------------------
+ Close_Amount  Close Amount         $1,173        $250      $1,481         $4,693
+ --------------------------------------------------------------------------------
+

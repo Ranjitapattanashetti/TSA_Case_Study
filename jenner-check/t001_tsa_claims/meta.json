@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_tsa_claims",
+  "source_file": "TSA Case study.sas",
+  "source_blob_sha": "0323b908a7cab70daf5fc8f3ae5426fb3007c678",
+  "source_commit": "c362ff77f6e73b318980c0a13b754e560d63d851",
+  "notes": "TSA Claims case study: dedup (proc sort nodupkey by _all_), array + do-over category cleaning with whitelist collapse to Unknown, Date_Issues validation flag, macro-variable-driven state slice (Hawaii) with PROC FREQ + PROC MEANS. The external PROC IMPORT of the 216k-row TSAClaims2002_2017.csv was replaced with an inline pipe-delimited sample matching the same column layout, so script.sas is self-contained (runs standalone via /v1/quick). All cleaning and analysis logic unchanged. The ODS-PDF-to-home-dir reporting step was omitted from the portable bundle."
+}

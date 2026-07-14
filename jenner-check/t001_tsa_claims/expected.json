@@ -1,0 +1,20 @@
+{
+  "_captured_at": "2026-07-14T15:30:31+00:00",
+  "_captured_run_id": "r_ad1354d5ac974995b3171ef5125504df",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "Wrote tsa.claims_raw (20 rows, 12 columns).",
+    "Wrote work.claims_nodup (19 rows, 12 columns).",
+    "Wrote tsa.claims_cleaned (19 rows, 11 columns).",
+    "PROC MEANS"
+  ],
+  "log_does_not_contain": [
+    "ERROR:",
+    "[JENNER-ERROR"
+  ],
+  "diagnostics": {
+    "parse_warnings": [],
+    "runtime_warnings": []
+  }
+}

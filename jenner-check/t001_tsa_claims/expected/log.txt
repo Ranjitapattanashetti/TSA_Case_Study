@@ -1,0 +1,57 @@
+NOTE: Jenner v1.5.30 (build v1.5.30+unknown.20260714T061458Z.x86_64-unknown-linux-gnu)
+
+NOTE: Option OBS changed to 100.
+NOTE: Option VALIDVARNAME changed to V7.
+NOTE: Library TSA uses 1 concatenated paths.
+NOTE: DATA tsa.claims_raw
+
+NOTE: Processing inline DATALINES (20 lines)
+
+NOTE: Read 20 rows from DATALINES.
+NOTE: Wrote tsa.claims_raw (20 rows, 12 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC CONTENTS data=tsa.claims_raw
+
+NOTE: PROC CONTENTS completed: 20 observations, 12 variables
+NOTE: PROC PRINT data=tsa.claims_raw
+
+NOTE: PROC PRINT completed: 10 observations printed, 12 variables
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_claim_site.spec.json
+NOTE: ODS plot written: freq_disposition.spec.json
+NOTE: ODS plot written: freq_claim_type.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=tsa.claims_raw
+
+NOTE: 1 duplicate observations were deleted.
+NOTE: Read 20 rows from tsa.claims_raw.
+NOTE: Wrote work.claims_nodup (19 rows, 12 columns).
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=work.claims_nodup
+
+NOTE: Read 19 rows from work.claims_nodup.
+NOTE: Wrote work.claims_nodup (19 rows, 12 columns).
+NOTE: PROC SORT statement used.
+NOTE: DATA tsa.claims_cleaned
+
+
+NOTE: Read 19 rows from work.claims_nodup.
+NOTE: Wrote tsa.claims_cleaned (19 rows, 11 columns).
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_date_issues.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_incident_date.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC FREQ
+NOTE: ODS plot written: freq_claim_type.spec.json
+NOTE: ODS plot written: freq_claim_site.spec.json
+NOTE: ODS plot written: freq_disposition.spec.json
+NOTE: PROC FREQ statement used.
+NOTE: PROC MEANS
+NOTE: PROC MEANS statement used.
